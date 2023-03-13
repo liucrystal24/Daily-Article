@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大文件分片上传</title>
+</head>
+
+<body>
+  <section id="summary"></section>
+  <article>
+    <div>演示：</div>
+    <input type="file" id="fileUpload">
+  </article>
+  <script type="module">
+    import createTitle from '../assets/createTitle.js';
+    const artilceConfig = {
+      title: '大文件分片上传',
+      background: [
+        "文件上传时，若文件过大，网络波动会导致文件整体上传失败，无法断点续传，因此需要分片上传"
+      ],
+      content: [
+        "文件分片：file.slice(start,end)",
+        "使用 spark-md5 增量计算文件的md5"
+      ],
+      extension: [
+        'readAsArrayBuffer 用法',
+        '如果文件较大，计算md5耗时较长，需要使用 web worker ，了解 web worker'
+      ]
+    }
+    createTitle(artilceConfig)
+  </script>
+  <script src="../assets/spark-md5.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
