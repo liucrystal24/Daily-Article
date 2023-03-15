@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/vs-2015.css">
   <title>大文件分片上传</title>
 </head>
 
 <body>
+  <!-- 加载文章配置，必须添加 -->
   <section id="summary"></section>
+  <!-- 功能演示，按需添加 -->
   <article>
     <div>演示：</div>
     <input type="file" id="fileUpload">
   </article>
+  <!-- 代码展示，必须添加 -->
+  <section id="code"></section>
+
   <script type="module">
-    import createTitle from '../assets/createTitle.js';
+    import '../assets/js/spark-md5.js'
+    import './index.js';
+    import { initArticle } from '../assets/js/initArticle.js';
     const artilceConfig = {
       title: '大文件分片上传',
       background: [
@@ -30,10 +38,9 @@
         '如果文件较大，计算md5耗时较长，需要使用 web worker ，了解 web worker'
       ]
     }
-    createTitle(artilceConfig)
+    initArticle(artilceConfig);
   </script>
-  <script src="../assets/spark-md5.js"></script>
-  <script src="./index.js"></script>
+
 </body>
 
 </html>
