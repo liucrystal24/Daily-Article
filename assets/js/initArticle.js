@@ -18,19 +18,19 @@ function loadArticleConfig({ title, background, content, extension }) {
 
   const titleDom = `<header>${title}</header>`;
 
-  let backgroundDom = `<section><div>背景：</div><ul>`
+  let backgroundDom = `<section><div class='titlePoint'>📖 背景</div><ul>`
   for (let i = 0; i < background.length; i++) {
     backgroundDom += `<li>${background[i]}</li>`
   }
   backgroundDom += `</ul></section>`
 
-  let contentDom = `<section><div>知识点：</div><ul>`
+  let contentDom = `<section><div class='titlePoint'>📖 知识点</div><ul>`
   for (let i = 0; i < content.length; i++) {
     contentDom += `<li>${content[i]}</li>`
   }
   contentDom += `</ul></section>`
 
-  let extensionDom = `<section><div>拓展点：</div><ul>`
+  let extensionDom = `<section><div class='titlePoint'>📖 拓展点</div><ul>`
   for (let i = 0; i < extension.length; i++) {
     extensionDom += `<li>${extension[i]}</li>`
   }
@@ -39,7 +39,7 @@ function loadArticleConfig({ title, background, content, extension }) {
   summary.innerHTML += titleDom + backgroundDom + contentDom + extensionDom;
 
   const codeShow = document.body.querySelector('#code');
-  const codeDom = `<div>代码展示：</div><pre><code class="hljs"></code></pre>`;
+  const codeDom = `<div class='titlePoint'>📖 代码展示</div><div class="code-container"><pre><code class="hljs"></code></pre></div>`;
   codeShow.innerHTML = codeDom;
 }
 
