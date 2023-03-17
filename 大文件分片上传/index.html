@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet/less" type="text/css" href="../assets/css/common.less" />
   <link rel="stylesheet" href="../assets/css/vs-2015.css">
+  <script src="../assets/js/less@4.js"></script>
   <title>大文件分片上传</title>
 </head>
 
@@ -13,10 +15,12 @@
   <!-- 加载文章配置，必须添加 -->
   <section id="summary"></section>
   <!-- 功能演示，按需添加 -->
-  <article>
-    <div>演示：</div>
-    <input type="file" id="fileUpload">
-  </article>
+  <section id="display">
+    <div class="titlePoint">📖 演示</div>
+    <div class="display-container">
+      <input type="file" id="fileUpload">
+    </div>
+  </section>
   <!-- 代码展示，必须添加 -->
   <section id="code"></section>
 
@@ -34,7 +38,7 @@
         "使用 spark-md5 增量计算文件的md5"
       ],
       extension: [
-        'readAsArrayBuffer 用法',
+        'FileReader.readAsArrayBuffer 用法',
         '如果文件较大，计算md5耗时较长，需要使用 web worker ，了解 web worker'
       ]
     }
